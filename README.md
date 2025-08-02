@@ -1,4 +1,4 @@
-# 🤖 YouTube Shorts Automation Suite
+# 🤖 YouTube & TikTok Automation Suite
 
 This project is a suite of scripts designed to automate the creation and uploading of short-form videos. It works by combining a base set of video clips with a library of audio tracks, generating numerous unique video variations, and then systematically uploading them to YouTube.
 

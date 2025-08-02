@@ -80,7 +80,7 @@ driver = webdriver.Chrome(
 
 try:
     # After the browser starts, immediately try to move it behind other windows
-    put_window_behind(window_title_substring="New Tab - Chromium")
+    # put_window_behind(window_title_substring="New Tab - Chromium")
 
     # 1. Navigate to YouTube
     driver.get("http://youtube.com/") # Corrected URL
@@ -196,38 +196,38 @@ try:
 
     print("Video successfully published to YouTube!")
 
-    # driver.get("https://www.tiktok.com/tiktokstudio/upload?from=webapp") # Corrected URL
-    # # 3. Upload the video file
-    # file_input_tk = WebDriverWait(driver, 20).until(
-    #     EC.presence_of_element_located((By.XPATH, '//input[@type="file"]'))
-    # )
-    # file_input_tk.send_keys(VIDEO_PATH)
-    # print("Video file selected.")
+    driver.get("https://www.tiktok.com/tiktokstudio/upload?from=webapp") # Corrected URL
+    # 3. Upload the video file
+    file_input_tk = WebDriverWait(driver, 20).until(
+        EC.presence_of_element_located((By.XPATH, '//input[@type="file"]'))
+    )
+    file_input_tk.send_keys(VIDEO_PATH)
+    print("Video file selected.")
 
-    # description_textbox = WebDriverWait(driver, 15).until(
-    #     EC.presence_of_element_located((By.XPATH, '//div[@contenteditable="true" and contains(@class, "public-DraftEditor-content")]'))
-    # )
-    # description_textbox.send_keys(Keys.BACKSPACE)
-    # description_textbox.send_keys(" "+VIDEO_TITLE)
-    # print("Video title entered.")
+    description_textbox = WebDriverWait(driver, 15).until(
+        EC.presence_of_element_located((By.XPATH, '//div[@contenteditable="true" and contains(@class, "public-DraftEditor-content")]'))
+    )
+    description_textbox.send_keys(Keys.BACKSPACE)
+    description_textbox.send_keys(" "+VIDEO_TITLE)
+    print("Video title entered.")
 
-    # # Wait for the upload to finalize
-    # WebDriverWait(driver, 300).until(
-    #     EC.presence_of_element_located((By.XPATH, '//*[contains(text(),"Uploaded")]'))
-    # )
-    # print("Video successfully uploaded!")
+    # Wait for the upload to finalize
+    WebDriverWait(driver, 300).until(
+        EC.presence_of_element_located((By.XPATH, '//*[contains(text(),"Uploaded")]'))
+    )
+    print("Video successfully uploaded!")
 
-    # post_button = WebDriverWait(driver, 10).until(
-    #     EC.element_to_be_clickable((By.XPATH, '//button[@data-e2e="post_video_button"]'))
-    # )
-    # post_button.click()
-    # print("Video upload process completed.")
+    post_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, '//button[@data-e2e="post_video_button"]'))
+    )
+    post_button.click()
+    print("Video upload process completed.")
 
-    # # Wait for the upload to finalize
-    # WebDriverWait(driver, 300).until(
-    #     EC.presence_of_element_located((By.XPATH, '//*[contains(text(),"Video published")]'))
-    # )
-    # print("Video successfully published to Tiktok!")
+    # Wait for the upload to finalize
+    WebDriverWait(driver, 300).until(
+        EC.presence_of_element_located((By.XPATH, '//*[contains(text(),"Video published")]'))
+    )
+    print("Video successfully published to Tiktok!")
 
     os.remove(VIDEO_PATH)
 

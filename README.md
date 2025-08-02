@@ -2,6 +2,13 @@
 
 This project is a suite of scripts designed to automate the creation and uploading of short-form videos. It works by combining a base set of video clips with a library of audio tracks, generating numerous unique video variations, and then systematically uploading them to YouTube.
 
+## Demo
+
+
+https://github.com/user-attachments/assets/36f1b4a8-603b-4b75-9105-8c2706c821c6
+
+
+
 ## ✨ Features
 
 -   **Batch Video Generation**: Automatically combines every video in the `videos` folder with every audio track in the `audios` folder.
@@ -24,6 +31,12 @@ The process is broken down into four main stages:
     * Place your sound clips (MP3, WAV, etc.) into the `/audios` directory.
     * Ensure your custom `outro.mp4` is in the root directory.
 3.  **Generate Videos**: Run the `./generate.sh` script. It will create every possible video-audio combination, add the fade and outro, and save the final files to the `/outputs` directory.
+   - **Sample Generated Videos**:
+
+https://github.com/user-attachments/assets/98045056-9b18-45ce-883c-a39c6a69bbdb
+
+https://github.com/user-attachments/assets/5619a634-8fd5-4a47-8e89-2d8b08e6a7e3
+
 4.  **Upload to YouTube**: Run the `python3 upload.py` script. It will:
     * Pick a random video from `/outputs`.
     * Open a Chrome browser with your specified user profile.
